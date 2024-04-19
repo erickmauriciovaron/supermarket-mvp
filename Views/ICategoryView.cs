@@ -1,5 +1,4 @@
-﻿using Supermarket_mvp.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace Supermarket_mvp.Views
 {
-    internal interface IProductView
+    internal interface ICategoryView
     {
-        string ProductId { get; set; }
-        string ProductName { get; set; }
         string CategoryId { get; set; }
-        string ProviderId { get; set; }
-        string Price { get; set; }
-        string StockQuantity { get; set; }
+        string CategoryName { get; set; }
+        string CategoryDescription { get; set; }
 
         string SearchValue { get; set; }
         bool IsEdit { get; set; }
@@ -28,8 +24,7 @@ namespace Supermarket_mvp.Views
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
 
-        void SetProductListBildingSource(BindingSource productList);
+        void SetCategoryListBindingSource(BindingSource categoryList);
         void Show();
-        
     }
 }
