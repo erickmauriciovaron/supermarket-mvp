@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Supermarket_mvp.views
+namespace Supermarket_mvp.Views
 {
     internal interface IPayModeView
     {
@@ -29,4 +29,3 @@ namespace Supermarket_mvp.views
         void Show();
     }
 }
-

@@ -5,8 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Supermarket_mvp.Views;
 using Supermarket_mvp.Models;
-using Supermarket_mvp.Views;
-using Supermarket_mvp.views;
 
 namespace Supermarket_mvp.Presenters
 {
@@ -82,6 +80,7 @@ namespace Supermarket_mvp.Presenters
         {
             throw new NotImplementedException();
         }
-    }
-}
 
+        
+    }    
+}

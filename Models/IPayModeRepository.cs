@@ -15,4 +15,3 @@ namespace Supermarket_mvp.Models
         IEnumerable<PayModeModel> GetByValues(string values);
     }
 }
-
