@@ -4,15 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Supermarket_mvp._Repositories
 {
-   internal class BaseRepository
+    internal class BaseRepository
     {
-     protected string connectionString;
-
-        public BaseRepository(string connectionString)
-        {
-            this.connectionString = connectionString;
-        }
+        protected string connectionString;
     }
 }
