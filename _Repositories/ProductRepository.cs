@@ -10,25 +10,26 @@ namespace Supermarket_mvp._Repositories
 {
     internal class ProductRepository : BaseRepository, IProductRepository
     {
-        public ProductRepository(string connectionString) : base(connectionString)
+        public ProductRepository(string connectionString)
         {
             this.connectionString = connectionString;
         }
+
 
         public void Add(ProductModel product)
         {
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
-            {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = "INSERT INTO Product (ProductName, CategoryId, ProviderId, Price, StockQuantity) VALUES (@name, @categoryId, @providerId, @price, @stockQuantity)";
-                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = product.Name;
-                command.Parameters.Add("@categoryId", SqlDbType.Int).Value = product.CategoryId;
-                command.Parameters.Add("@providerId", SqlDbType.Int).Value = product.ProviderId;
-                command.Parameters.Add("@price", SqlDbType.Decimal).Value = product.Price;
-                command.Parameters.Add("@stockQuantity", SqlDbType.Int).Value = product.StockQuantity;
-                command.ExecuteNonQuery();
+            {                
+                    connection.Open();
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Product VALUES (@product_name, @category_Id, @provider_Id, @price, @stock_Quantity)";
+                    command.Parameters.Add("@product_name", SqlDbType.NVarChar).Value = product.ProductName;
+                    command.Parameters.Add("@category_Id", SqlDbType.Int).Value = product.CategoryId;
+                    command.Parameters.Add("@provider_Id", SqlDbType.Int).Value = product.ProviderId;
+                    command.Parameters.Add("@price", SqlDbType.Decimal).Value = product.Price;
+                    command.Parameters.Add("@stock_Quantity", SqlDbType.Int).Value = product.StockQuantity;
+                    command.ExecuteNonQuery();                
             }
         }
 
@@ -37,29 +38,35 @@ namespace Supermarket_mvp._Repositories
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
             {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = "DELETE FROM Product WHERE ProductID = @id";
-                command.Parameters.Add("@id", SqlDbType.Int).Value = productId;
-                command.ExecuteNonQuery();
+                    connection.Open();
+                    command.Connection = connection;
+                    command.CommandText = "DELETE FROM Product WHERE ProductID = @id";
+                    command.Parameters.Add("@id", SqlDbType.Int).Value = productId;
+                    command.ExecuteNonQuery();                
             }
         }
 
-        public void Edit(ProductModel product)
+        public void Edit(ProductModel productModel)
         {
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
-            {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = "UPDATE Product SET ProductName = @name, CategoryId = @categoryId, ProviderId = @providerId, Price = @price, StockQuantity = @stockQuantity WHERE ProductID = @id";
-                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = product.Name;
-                command.Parameters.Add("@categoryId", SqlDbType.Int).Value = product.CategoryId;
-                command.Parameters.Add("@providerId", SqlDbType.Int).Value = product.ProviderId;
-                command.Parameters.Add("@price", SqlDbType.Decimal).Value = product.Price;
-                command.Parameters.Add("@stockQuantity", SqlDbType.Int).Value = product.StockQuantity;
-                command.Parameters.Add("@id", SqlDbType.Int).Value = product.Id;
-                command.ExecuteNonQuery();
+            {               
+                    connection.Open();
+                    command.Connection = connection;
+                    command.CommandText = @"UPDATE Product
+                                            SET Product_Name = @name, 
+                                            Category_Id = @categoryId,
+                                            Provider_Id = @providerId,
+                                            Price = @price,
+                                            Stock_Quantity = @stockQuantity 
+                                            WHERE Product_Id = @id";
+                    command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.ProductName;
+                    command.Parameters.Add("@categoryId", SqlDbType.Int).Value = productModel.CategoryId;
+                    command.Parameters.Add("@providerId", SqlDbType.Int).Value = productModel.ProviderId;
+                    command.Parameters.Add("@price", SqlDbType.Decimal).Value = productModel.Price;
+                    command.Parameters.Add("@stockQuantity", SqlDbType.Int).Value = productModel.StockQuantity;
+                    command.Parameters.Add("@id", SqlDbType.Int).Value = productModel.ProductId;
+                    command.ExecuteNonQuery();                
             }
         }
 
@@ -68,26 +75,24 @@ namespace Supermarket_mvp._Repositories
             var productList = new List<ProductModel>();
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
-            {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = "SELECT * FROM Product";
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
+            {                
+                    connection.Open();
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Product ORDER BY Product_Mode_Id DESC";
+                    using (var reader = command.ExecuteReader())
                     {
-                        var product = new ProductModel
+                        while (reader.Read())
                         {
-                            Id = (int)reader["ProductID"],
-                            Name = reader["ProductName"].ToString(),
-                            CategoryId = (int)reader["CategoryId"],
-                            ProviderId = (int)reader["ProviderId"],
-                            Price = (decimal)reader["Price"],
-                            StockQuantity = (int)reader["StockQuantity"]
-                        };
-                        productList.Add(product);
+                             var productModel = new ProductModel();
+                        productModel.ProductId = (int)reader["Product_Id"];
+                        productModel.ProductName = reader["Product_Name"].ToString();
+                        productModel.CategoryId = (int)reader["Category_Id"];
+                        productModel.ProviderId = (int)reader["Provider_Id"];
+                        productModel.Price = (decimal)reader["Price"];
+                        productModel.StockQuantity = (int)reader["Stock_Quantity"];
+                        productList.Add(productModel);
+                        }
                     }
-                }
             }
             return productList;
         }
@@ -100,27 +105,27 @@ namespace Supermarket_mvp._Repositories
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
             {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = "SELECT * FROM Product WHERE ProductID = @id OR ProductName LIKE @name+'%'";
-                command.Parameters.Add("@id", SqlDbType.Int).Value = productId;
-                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productName;
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
+                    connection.Open();
+                    command.Connection = connection;
+                    command.CommandText = @"SELECT * FROM Product
+                                          WHERE Product_Id = @id OR Product_Name LIKE @name+ '%'
+                                          ORDER By Product_Id DESC";
+                    command.Parameters.Add("@id", SqlDbType.Int).Value = productId;
+                    command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productName;
+                    using (var reader = command.ExecuteReader())
                     {
-                        var product = new ProductModel
+                        while (reader.Read())
                         {
-                            Id = (int)reader["ProductID"],
-                            Name = reader["ProductName"].ToString(),
-                            CategoryId = (int)reader["CategoryId"],
-                            ProviderId = (int)reader["ProviderId"],
-                            Price = (decimal)reader["Price"],
-                            StockQuantity = (int)reader["StockQuantity"]
-                        };
-                        productList.Add(product);
+                        var productModel = new ProductModel();
+                        productModel.ProductId = (int)reader["Product_Id"];
+                        productModel.ProductName = reader["Product_Name"].ToString();
+                        productModel.CategoryId = (int)reader["Category_Id"];
+                        productModel.ProviderId = (int)reader["Provider_Id"];
+                        productModel.Price = (decimal)reader["Price"];
+                        productModel.StockQuantity = (int)reader["Stock_Quantity"];                            
+                        productList.Add(productModel);
+                        }
                     }
-                }
             }
             return productList;
         }
@@ -133,22 +138,22 @@ namespace Supermarket_mvp._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "SELECT * FROM Product WHERE CategoryId = @categoryId";
+                command.CommandText = @"SELECT * FROM Product
+                                WHERE CategoryId = @categoryId
+                                ORDER BY Product_Id DESC";
                 command.Parameters.Add("@categoryId", SqlDbType.Int).Value = categoryId;
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        var product = new ProductModel
-                        {
-                            Id = (int)reader["ProductID"],
-                            Name = reader["ProductName"].ToString(),
-                            CategoryId = (int)reader["CategoryId"],
-                            ProviderId = (int)reader["ProviderId"],
-                            Price = (decimal)reader["Price"],
-                            StockQuantity = (int)reader["StockQuantity"]
-                        };
-                        productList.Add(product);
+                        var productModel = new ProductModel();
+                        productModel.ProductId = (int)reader["Product_Id"];
+                        productModel.ProductName = reader["Product_Name"].ToString();
+                        productModel.CategoryId = (int)reader["Category_Id"];
+                        productModel.ProviderId = (int)reader["Provider_Id"];
+                        productModel.Price = (decimal)reader["Price"];
+                        productModel.StockQuantity = (int)reader["Stock_Quantity"];
+                        productList.Add(productModel);
                     }
                 }
             }
@@ -163,22 +168,22 @@ namespace Supermarket_mvp._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "SELECT * FROM Product WHERE ProviderId = @providerId";
+                command.CommandText = @"SELECT * FROM Product
+                                WHERE ProviderId = @providerId
+                                ORDER BY Product_Id DESC";
                 command.Parameters.Add("@providerId", SqlDbType.Int).Value = providerId;
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        var product = new ProductModel
-                        {
-                            Id = (int)reader["ProductID"],
-                            Name = reader["ProductName"].ToString(),
-                            CategoryId = (int)reader["CategoryId"],
-                            ProviderId = (int)reader["ProviderId"],
-                            Price = (decimal)reader["Price"],
-                            StockQuantity = (int)reader["StockQuantity"]
-                        };
-                        productList.Add(product);
+                        var productModel = new ProductModel();
+                        productModel.ProductId = (int)reader["Product_Id"];
+                        productModel.ProductName = reader["Product_Name"].ToString();
+                        productModel.CategoryId = (int)reader["Category_Id"];
+                        productModel.ProviderId = (int)reader["Provider_Id"];
+                        productModel.Price = (decimal)reader["Price"];
+                        productModel.StockQuantity = (int)reader["Stock_Quantity"];
+                        productList.Add(productModel);
                     }
                 }
             }
@@ -191,26 +196,28 @@ namespace Supermarket_mvp._Repositories
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
             {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = "SELECT * FROM Product WHERE ProductName LIKE @searchTerm OR CategoryId IN (SELECT CategoryId FROM Category WHERE CategoryName LIKE @searchTerm) OR ProviderId IN (SELECT ProviderId FROM Provider WHERE ProviderName LIKE @searchTerm)";
-                command.Parameters.Add("@searchTerm", SqlDbType.NVarChar).Value = $"%{searchTerm}%";
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
+                    connection.Open();
+                    command.Connection = connection;
+                    command.CommandText = @"SELECT * FROM Product
+                                    WHERE ProductName LIKE @searchTerm 
+                                    OR CategoryId IN (SELECT CategoryId FROM Category WHERE CategoryName LIKE @searchTerm) 
+                                    OR ProviderId IN (SELECT ProviderId FROM Provider WHERE ProviderName LIKE @searchTerm)
+                                    ORDER BY Product_Id DESC";
+                    command.Parameters.Add("@searchTerm", SqlDbType.NVarChar).Value = $"%{searchTerm}%";
+                    using (var reader = command.ExecuteReader())
                     {
-                        var product = new ProductModel
+                        while (reader.Read())
                         {
-                            Id = (int)reader["ProductID"],
-                            Name = reader["ProductName"].ToString(),
-                            CategoryId = (int)reader["CategoryId"],
-                            ProviderId = (int)reader["ProviderId"],
-                            Price = (decimal)reader["Price"],
-                            StockQuantity = (int)reader["StockQuantity"]
-                        };
-                        productList.Add(product);
-                    }
-                }
+                        var productModel = new ProductModel();
+                        productModel.ProductId = (int)reader["ProductID"];
+                        productModel.ProductName = reader["ProductName"].ToString();
+                        productModel.CategoryId = (int)reader["CategoryId"];
+                        productModel.ProviderId = (int)reader["ProviderId"];
+                        productModel.Price = (decimal)reader["Price"];
+                        productModel.StockQuantity = (int)reader["StockQuantity"];
+                        productList.Add(productModel);
+                        }
+                    }       
             }
             return productList;
         }
