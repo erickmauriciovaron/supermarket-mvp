@@ -16,12 +16,12 @@ namespace Supermarket_mvp.Views
 
             tabControl1.TabPages.Remove(tabPageProvidersDetail);
 
-            BtnClose.Click += delegate { this.Close(); };
+            BtnCloses.Click += delegate { this.Close(); };
         }
 
         private void AssociateAndRaiseViewEvents()
         {
-            BtnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            BtnSearchs.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
 
             TxtSearch.KeyDown += (s, e) =>
             {
@@ -31,7 +31,7 @@ namespace Supermarket_mvp.Views
                 }
             };
 
-            BtnNew.Click += delegate {
+            BtnNews.Click += delegate {
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
 
                 tabControl1.TabPages.Remove(tabPageProvidersList);
@@ -39,7 +39,7 @@ namespace Supermarket_mvp.Views
                 tabPageProvidersDetail.Text = "Add New Provider";
             };
 
-            BtnEdit.Click += delegate {
+            BtnEdits.Click += delegate {
                 EditEvent?.Invoke(this, EventArgs.Empty);
 
                 tabControl1.TabPages.Remove(tabPageProvidersList);
@@ -47,7 +47,7 @@ namespace Supermarket_mvp.Views
                 tabPageProvidersDetail.Text = "Edit Provider";
             };
 
-            BtnDelete.Click += delegate {
+            BtnDeletes.Click += delegate {
                 var result = MessageBox.Show(
                     "Are you sure you want to delete the selected Provider?",
                     "Warning",
@@ -60,7 +60,7 @@ namespace Supermarket_mvp.Views
                 }
             };
 
-            BtnSave.Click += delegate {
+            BtnSaves.Click += delegate {
                 SaveEvent?.Invoke(this, EventArgs.Empty);
 
                 if (isSuccessful)
@@ -71,7 +71,7 @@ namespace Supermarket_mvp.Views
                 MessageBox.Show(Message);
             };
 
-            BtnCancel.Click += delegate {
+            BtnCancels.Click += delegate {
                 CancelEvent?.Invoke(this, EventArgs.Empty);
 
                 tabControl1.TabPages.Remove(tabPageProvidersDetail);
@@ -79,7 +79,7 @@ namespace Supermarket_mvp.Views
             };
         }
 
-        public string ProvidersId
+        public string ProviderId
         {
             get { return TxtProvidersId.Text; }
             set { TxtProvidersId.Text = value; }
@@ -91,19 +91,19 @@ namespace Supermarket_mvp.Views
             set { TxtProviderName.Text = value; }
         }
 
-        public string ContactName
+        public string ProviderContactName
         {
             get { return TxtContactName.Text; }
             set { TxtContactName.Text = value; }
         }
 
-        public string ContactPhone
+        public string ProviderContactPhone
         {
             get { return TxtContactPhone.Text; }
             set { TxtContactPhone.Text = value; }
         }
 
-        public string ContactEmail
+        public string ProviderEmail
         {
             get { return TxtContactEmail.Text; }
             set { TxtContactEmail.Text = value; }

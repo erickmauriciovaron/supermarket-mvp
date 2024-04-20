@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Views\\PayModeView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\PayModeView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Views\\ProvidersView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\ProvidersView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\views\\providersview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:views\\providersview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\views\\paymodeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:views\\paymodeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\_repositories\\paymoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_repositories\\paymoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Views\\ProvidersView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\ProvidersView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\_repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\presenters\\providerspresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:presenters\\providerspresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\_repositories\\providersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_repositories\\providersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,14 +51,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PayModeView.cs",
-              "DocumentMoniker": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Views\\PayModeView.cs",
-              "RelativeDocumentMoniker": "Views\\PayModeView.cs",
-              "ToolTip": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Views\\PayModeView.cs",
-              "RelativeToolTip": "Views\\PayModeView.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAowGAAAAAJAAAA",
+              "Title": "ProvidersView.cs",
+              "DocumentMoniker": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Views\\ProvidersView.cs",
+              "RelativeDocumentMoniker": "Views\\ProvidersView.cs",
+              "ToolTip": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Views\\ProvidersView.cs",
+              "RelativeToolTip": "Views\\ProvidersView.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAwBcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T05:17:54.634Z",
+              "WhenOpened": "2024-04-20T06:37:32.286Z",
               "EditorCaption": ""
             },
             {
@@ -59,56 +67,58 @@
               "Title": "ProvidersView.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Views\\ProvidersView.cs",
               "RelativeDocumentMoniker": "Views\\ProvidersView.cs",
-              "ToolTip": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Views\\ProvidersView.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Views\\ProvidersView.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\Proyectos\\Supermarket-mvp\\Views\\ProvidersView.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "..\\..\\..\\..\\USUARIO\\Documents\\Proyectos\\Supermarket-mvp\\Views\\ProvidersView.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T05:05:16.822Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-04-20T06:37:22.486Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PayModeView.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Views\\PayModeView.cs",
-              "RelativeDocumentMoniker": "Views\\PayModeView.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Documents\\Proyectos\\Supermarket-mvp\\Views\\PayModeView.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\USUARIO\\Documents\\Proyectos\\Supermarket-mvp\\Views\\PayModeView.cs [Dise\u00F1o]",
+              "Title": "PayModeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\_Repositories\\PayModeRepository.cs",
+              "RelativeDocumentMoniker": "_Repositories\\PayModeRepository.cs",
+              "ToolTip": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\_Repositories\\PayModeRepository.cs",
+              "RelativeToolTip": "_Repositories\\PayModeRepository.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAcwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T05:05:35.611Z"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "3caa23be-75c8-4425-8639-063a394c7714",
-        "Display": 0,
-        "X": 1449,
-        "Y": 57,
-        "Width": 973,
-        "Height": 882,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
+              "WhenOpened": "2024-04-20T06:35:53.759Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProvidersView.cs",
-              "DocumentMoniker": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Views\\ProvidersView.cs",
-              "RelativeDocumentMoniker": "Views\\ProvidersView.cs",
-              "ToolTip": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Views\\ProvidersView.cs",
-              "RelativeToolTip": "Views\\ProvidersView.cs",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAswJIAAAAAAAAA",
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\_Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "_Repositories\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\_Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "_Repositories\\ProductRepository.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAcwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T05:17:49.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T06:34:48.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProvidersPresenter.cs",
+              "DocumentMoniker": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Presenters\\ProvidersPresenter.cs",
+              "RelativeDocumentMoniker": "Presenters\\ProvidersPresenter.cs",
+              "ToolTip": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\Presenters\\ProvidersPresenter.cs",
+              "RelativeToolTip": "Presenters\\ProvidersPresenter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T06:33:34.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProvidersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\_Repositories\\ProvidersRepository.cs",
+              "RelativeDocumentMoniker": "_Repositories\\ProvidersRepository.cs",
+              "ToolTip": "C:\\Users\\Erick varon\\source\\repos\\Supermarket-mvp\\_Repositories\\ProvidersRepository.cs",
+              "RelativeToolTip": "_Repositories\\ProvidersRepository.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAcwGsAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T06:31:41.437Z"
             }
           ]
         }

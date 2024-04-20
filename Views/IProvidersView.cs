@@ -4,9 +4,9 @@
     {
         string ProviderId { get; set; }
         string ProviderName { get; set; }
-        string ContactName { get; set; }
-        string ContactPhone { get; set; }
-        string ContactEmail { get; set; }
+        string ProviderContactName { get; set; }
+        string ProviderContactPhone { get; set; }
+        string ProviderEmail { get; set; }
 
         string SearchValue { get; set; }
 
@@ -22,5 +22,6 @@
         event EventHandler CancelEvent;
 
         void SetProviderListBindingSource(BindingSource providerList);
+        void Show();
     }
 }

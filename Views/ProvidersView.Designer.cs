@@ -33,11 +33,11 @@
             label1 = new Label();
             tabControl1 = new TabControl();
             tabPageProvidersList = new TabPage();
-            button5 = new Button();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            BtnSearchs = new Button();
+            BtnCloses = new Button();
+            BtnDeletes = new Button();
+            BtnEdits = new Button();
+            BtnNews = new Button();
             BtnClose = new Button();
             BtnDelete = new Button();
             BtnEdit = new Button();
@@ -57,8 +57,8 @@
             label3 = new Label();
             TxtProviderName = new TextBox();
             TxtProvidersId = new TextBox();
-            BtnCancel = new Button();
-            BtnSave = new Button();
+            BtnCancels = new Button();
+            BtnSaves = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
@@ -110,11 +110,11 @@
             // 
             // tabPageProvidersList
             // 
-            tabPageProvidersList.Controls.Add(button5);
-            tabPageProvidersList.Controls.Add(button1);
-            tabPageProvidersList.Controls.Add(button2);
-            tabPageProvidersList.Controls.Add(button3);
-            tabPageProvidersList.Controls.Add(button4);
+            tabPageProvidersList.Controls.Add(BtnSearchs);
+            tabPageProvidersList.Controls.Add(BtnCloses);
+            tabPageProvidersList.Controls.Add(BtnDeletes);
+            tabPageProvidersList.Controls.Add(BtnEdits);
+            tabPageProvidersList.Controls.Add(BtnNews);
             tabPageProvidersList.Controls.Add(BtnClose);
             tabPageProvidersList.Controls.Add(BtnDelete);
             tabPageProvidersList.Controls.Add(BtnEdit);
@@ -131,55 +131,55 @@
             tabPageProvidersList.Text = "Providers List";
             tabPageProvidersList.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // BtnSearchs
             // 
-            button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button5.Image = Properties.Resources.search_small;
-            button5.Location = new Point(552, 30);
-            button5.Name = "button5";
-            button5.Size = new Size(38, 41);
-            button5.TabIndex = 12;
-            button5.UseVisualStyleBackColor = true;
+            BtnSearchs.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnSearchs.Image = Properties.Resources.search_small;
+            BtnSearchs.Location = new Point(552, 30);
+            BtnSearchs.Name = "BtnSearchs";
+            BtnSearchs.Size = new Size(38, 41);
+            BtnSearchs.TabIndex = 12;
+            BtnSearchs.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BtnCloses
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.Image = Properties.Resources.cerrar;
-            button1.Location = new Point(627, 248);
-            button1.Name = "button1";
-            button1.Size = new Size(133, 51);
-            button1.TabIndex = 11;
-            button1.UseVisualStyleBackColor = true;
+            BtnCloses.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnCloses.Image = Properties.Resources.cerrar;
+            BtnCloses.Location = new Point(627, 248);
+            BtnCloses.Name = "BtnCloses";
+            BtnCloses.Size = new Size(133, 51);
+            BtnCloses.TabIndex = 11;
+            BtnCloses.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnDeletes
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button2.Image = Properties.Resources.delete;
-            button2.Location = new Point(627, 191);
-            button2.Name = "button2";
-            button2.Size = new Size(133, 51);
-            button2.TabIndex = 10;
-            button2.UseVisualStyleBackColor = true;
+            BtnDeletes.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnDeletes.Image = Properties.Resources.delete;
+            BtnDeletes.Location = new Point(627, 191);
+            BtnDeletes.Name = "BtnDeletes";
+            BtnDeletes.Size = new Size(133, 51);
+            BtnDeletes.TabIndex = 10;
+            BtnDeletes.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtnEdits
             // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button3.Image = Properties.Resources.edit;
-            button3.Location = new Point(627, 134);
-            button3.Name = "button3";
-            button3.Size = new Size(133, 51);
-            button3.TabIndex = 9;
-            button3.UseVisualStyleBackColor = true;
+            BtnEdits.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnEdits.Image = Properties.Resources.edit;
+            BtnEdits.Location = new Point(627, 134);
+            BtnEdits.Name = "BtnEdits";
+            BtnEdits.Size = new Size(133, 51);
+            BtnEdits.TabIndex = 9;
+            BtnEdits.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // BtnNews
             // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.Image = Properties.Resources._new;
-            button4.Location = new Point(627, 77);
-            button4.Name = "button4";
-            button4.Size = new Size(133, 51);
-            button4.TabIndex = 8;
-            button4.UseVisualStyleBackColor = true;
+            BtnNews.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnNews.Image = Properties.Resources._new;
+            BtnNews.Location = new Point(627, 77);
+            BtnNews.Name = "BtnNews";
+            BtnNews.Size = new Size(133, 51);
+            BtnNews.TabIndex = 8;
+            BtnNews.UseVisualStyleBackColor = true;
             // 
             // BtnClose
             // 
@@ -275,8 +275,8 @@
             tabPageProvidersDetail.Controls.Add(label3);
             tabPageProvidersDetail.Controls.Add(TxtProviderName);
             tabPageProvidersDetail.Controls.Add(TxtProvidersId);
-            tabPageProvidersDetail.Controls.Add(BtnCancel);
-            tabPageProvidersDetail.Controls.Add(BtnSave);
+            tabPageProvidersDetail.Controls.Add(BtnCancels);
+            tabPageProvidersDetail.Controls.Add(BtnSaves);
             tabPageProvidersDetail.Location = new Point(4, 24);
             tabPageProvidersDetail.Name = "tabPageProvidersDetail";
             tabPageProvidersDetail.Padding = new Padding(3);
@@ -377,23 +377,23 @@
             TxtProvidersId.Text = "0";
             TxtProvidersId.TextAlign = HorizontalAlignment.Right;
             // 
-            // BtnCancel
+            // BtnCancels
             // 
-            BtnCancel.Image = Properties.Resources.search_small;
-            BtnCancel.Location = new Point(402, 236);
-            BtnCancel.Name = "BtnCancel";
-            BtnCancel.Size = new Size(99, 60);
-            BtnCancel.TabIndex = 1;
-            BtnCancel.UseVisualStyleBackColor = true;
+            BtnCancels.Image = Properties.Resources.search_small;
+            BtnCancels.Location = new Point(402, 236);
+            BtnCancels.Name = "BtnCancels";
+            BtnCancels.Size = new Size(99, 60);
+            BtnCancels.TabIndex = 1;
+            BtnCancels.UseVisualStyleBackColor = true;
             // 
-            // BtnSave
+            // BtnSaves
             // 
-            BtnSave.Image = Properties.Resources.save;
-            BtnSave.Location = new Point(282, 236);
-            BtnSave.Name = "BtnSave";
-            BtnSave.Size = new Size(99, 60);
-            BtnSave.TabIndex = 0;
-            BtnSave.UseVisualStyleBackColor = true;
+            BtnSaves.Image = Properties.Resources.save;
+            BtnSaves.Location = new Point(282, 236);
+            BtnSaves.Name = "BtnSaves";
+            BtnSaves.Size = new Size(99, 60);
+            BtnSaves.TabIndex = 0;
+            BtnSaves.UseVisualStyleBackColor = true;
             // 
             // ProvidersView
             // 
@@ -437,13 +437,13 @@
         private Label label3;
         private TextBox TxtProviderName;
         private TextBox TxtProvidersId;
-        private Button BtnCancel;
-        private Button BtnSave;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
+        private Button BtnCancels;
+        private Button BtnSaves;
+        private Button BtnCloses;
+        private Button BtnDeletes;
+        private Button BtnEdits;
+        private Button BtnNews;
+        private Button BtnSearchs;
         private TextBox TxtContactEmail;
         private TextBox TxtContactPhone;
         private TextBox TxtContactName;

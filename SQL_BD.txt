@@ -8,6 +8,26 @@ create table PayMode
 go
 insert into PayMode values('Cash', 'Cash mode')
 insert into PayMode values('Credit card', 'Credit card mode')
+insert into PayMode values('Cheque', 'Modo de pago cheque')
+insert into PayMode values('Tarjeta de débito', 'Modo de pago tarjeta de débito')
+insert into PayMode values('Transferencia bancaria', 'Modo de pago transferencia bancaria')
+insert into PayMode values('PayPal', 'Modo de pago PayPal')
+insert into PayMode values('Bitcoin', 'Modo de pago Bitcoin')
+insert into PayMode values('Billetera electrónica', 'Modo de pago billetera electrónica')
+insert into PayMode values('Tarjeta de regalo', 'Modo de pago tarjeta de regalo')
+insert into PayMode values('Depósito directo', 'Modo de pago depósito directo')
+insert into PayMode values('Pago móvil', 'Modo de pago pago móvil')
+insert into PayMode values('Apple Pay', 'Modo de pago Apple Pay')
+insert into PayMode values('Google Pay', 'Modo de pago Google Pay')
+insert into PayMode values('Samsung Pay', 'Modo de pago Samsung Pay')
+insert into PayMode values('Amazon Pay', 'Modo de pago Amazon Pay')
+insert into PayMode values('Venmo', 'Modo de pago Venmo')
+insert into PayMode values('Square Cash', 'Modo de pago Square Cash')
+insert into PayMode values('Zelle', 'Modo de pago Zelle')
+insert into PayMode values('Stripe', 'Modo de pago Stripe')
+insert into PayMode values('TransferWise', 'Modo de pago TransferWise')
+insert into PayMode values('Western Union', 'Modo de pago Western Union')
+
 
 
 use Supermarket
@@ -20,6 +40,26 @@ create table Category
 go
 insert into Category values('Electronics', 'Electronic products')
 insert into Category values('Clothing', 'Clothing products')
+insert into Category values('Artículos para el hogar', 'Categoría de artículos para el hogar')
+insert into Category values('Juguetes', 'Categoría de juguetes')
+insert into Category values('Libros', 'Categoría de libros')
+insert into Category values('Alimentos', 'Categoría de alimentos')
+insert into Category values('Muebles', 'Categoría de muebles')
+insert into Category values('Joyas', 'Categoría de joyas')
+insert into Category values('Artículos deportivos', 'Categoría de artículos deportivos')
+insert into Category values('Herramientas', 'Categoría de herramientas')
+insert into Category values('Suministros para mascotas', 'Categoría de suministros para mascotas')
+insert into Category values('Salud y belleza', 'Categoría de salud y belleza')
+insert into Category values('Accesorios de electrónica', 'Categoría de accesorios de electrónica')
+insert into Category values('Automotriz', 'Categoría automotriz')
+insert into Category values('Suministros de oficina', 'Categoría de suministros de oficina')
+insert into Category values('Instrumentos musicales', 'Categoría de instrumentos musicales')
+insert into Category values('Productos para bebés', 'Categoría de productos para bebés')
+insert into Category values('Accesorios de ropa', 'Categoría de accesorios de ropa')
+insert into Category values('Equipo para actividades al aire libre', 'Categoría de equipo para actividades al aire libre')
+insert into Category values('Accesorios de viaje', 'Categoría de accesorios de viaje')
+insert into Category values('Bienes digitales', 'Categoría de bienes digitales')
+
 
 
 
@@ -35,6 +75,26 @@ create table Provider
 go
 insert into Provider values('Provider 1', 'Contact 1', '123456789', 'contact1@example.com')
 insert into Provider values('Provider 2', 'Contact 2', '987654321', 'contact2@example.com')
+insert into Provider values('Proveedor 3', 'Contacto 3', '987654321', 'contacto3@example.com')
+insert into Provider values('Proveedor 4', 'Contacto 4', '123456789', 'contacto4@example.com')
+insert into Provider values('Proveedor 5', 'Contacto 5', '555555555', 'contacto5@example.com')
+insert into Provider values('Proveedor 6', 'Contacto 6', '444444444', 'contacto6@example.com')
+insert into Provider values('Proveedor 7', 'Contacto 7', '333333333', 'contacto7@example.com')
+insert into Provider values('Proveedor 8', 'Contacto 8', '222222222', 'contacto8@example.com')
+insert into Provider values('Proveedor 9', 'Contacto 9', '111111111', 'contacto9@example.com')
+insert into Provider values('Proveedor 10', 'Contacto 10', '999999999', 'contacto10@example.com')
+insert into Provider values('Proveedor 11', 'Contacto 11', '888888888', 'contacto11@example.com')
+insert into Provider values('Proveedor 12', 'Contacto 12', '777777777', 'contacto12@example.com')
+insert into Provider values('Proveedor 13', 'Contacto 13', '666666666', 'contacto13@example.com')
+insert into Provider values('Proveedor 14', 'Contacto 14', '555555555', 'contacto14@example.com')
+insert into Provider values('Proveedor 15', 'Contacto 15', '444444444', 'contacto15@example.com')
+insert into Provider values('Proveedor 16', 'Contacto 16', '333333333', 'contacto16@example.com')
+insert into Provider values('Proveedor 17', 'Contacto 17', '222222222', 'contacto17@example.com')
+insert into Provider values('Proveedor 18', 'Contacto 18', '111111111', 'contacto18@example.com')
+insert into Provider values('Proveedor 19', 'Contacto 19', '999999999', 'contacto19@example.com')
+insert into Provider values('Proveedor 20', 'Contacto 20', '888888888', 'contacto20@example.com')
+insert into Provider values('Proveedor 21', 'Contacto 21', '777777777', 'contacto21@example.com')
+
 
 
 
@@ -51,4 +111,25 @@ create table Product
 go
 insert into Product values('Smartphone', 1, 1, 500, 100)
 insert into Product values('Laptop', 1, 2, 1000, 50)
+insert into Product values('Audífonos', 1, 3, 50, 200)
+insert into Product values('Televisión', 1, 4, 500, 100)
+insert into Product values('Lámpara', 1, 5, 20, 300)
+insert into Product values('Coche de juguete', 2, 6, 10, 500)
+insert into Product values('Libro de cocina', 2, 7, 15, 400)
+insert into Product values('Silla', 2, 8, 30, 150)
+insert into Product values('Pulsera', 3, 9, 50, 100)
+insert into Product values('Raqueta de tenis', 3, 10, 70, 80)
+insert into Product values('Taladro', 4, 11, 80, 70)
+insert into Product values('Comida para perros', 4, 12, 25, 200)
+insert into Product values('Champú', 4, 13, 10, 400)
+insert into Product values('Cargador de teléfono', 5, 14, 5, 600)
+insert into Product values('Aceite para automóvil', 5, 15, 15, 300)
+insert into Product values('Piano', 6, 16, 1000, 20)
+insert into Product values('Biberón', 6, 17, 3, 1000)
+insert into Product values('Bufanda', 7, 18, 12, 200)
+insert into Product values('Mochila', 7, 19, 25, 150)
+insert into Product values('E-book', 8, 20, 5, 1000)
+insert into Product values('Aspiradora', 8, 1, 200, 50)
+insert into Product values('Dispositivo GPS', 8, 2, 150, 70)
+
 
