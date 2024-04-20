@@ -195,9 +195,9 @@
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(23, 15);
             label2.Name = "label2";
-            label2.Size = new Size(102, 15);
+            label2.Size = new Size(98, 15);
             label2.TabIndex = 2;
-            label2.Text = "Search Pay Mode";
+            label2.Text = "Search Category";
             // 
             // tabPageCategoryDetail
             // 
@@ -239,38 +239,38 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(53, 137);
+            label5.Location = new Point(39, 137);
             label5.Name = "label5";
-            label5.Size = new Size(149, 17);
+            label5.Size = new Size(144, 17);
             label5.TabIndex = 13;
-            label5.Text = "Pay Mode Observation";
+            label5.Text = "Category Observation";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(53, 85);
+            label4.Location = new Point(39, 85);
             label4.Name = "label4";
-            label4.Size = new Size(109, 17);
+            label4.Size = new Size(104, 17);
             label4.TabIndex = 12;
-            label4.Text = "Pay Mode Name";
+            label4.Text = "Category Name";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(53, 33);
+            label3.Location = new Point(39, 33);
             label3.Name = "label3";
-            label3.Size = new Size(85, 17);
+            label3.Size = new Size(80, 17);
             label3.TabIndex = 11;
-            label3.Text = "Pay Mode Id";
+            label3.Text = "Category Id";
             // 
             // TxtCategoryDescription
             // 
             TxtCategoryDescription.Location = new Point(39, 157);
             TxtCategoryDescription.Multiline = true;
             TxtCategoryDescription.Name = "TxtCategoryDescription";
-            TxtCategoryDescription.PlaceholderText = "Pay Mode Observation";
+            TxtCategoryDescription.PlaceholderText = "Category Observation";
             TxtCategoryDescription.Size = new Size(272, 56);
             TxtCategoryDescription.TabIndex = 10;
             // 
@@ -278,7 +278,7 @@
             // 
             TxtCategoryName.Location = new Point(39, 105);
             TxtCategoryName.Name = "TxtCategoryName";
-            TxtCategoryName.PlaceholderText = "Pay Mode Name";
+            TxtCategoryName.PlaceholderText = "Category Name";
             TxtCategoryName.Size = new Size(272, 23);
             TxtCategoryName.TabIndex = 9;
             // 
